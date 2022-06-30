@@ -18,16 +18,14 @@ public class Passageway : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.position = connectedToPassageway.playerDestinationPosition.position;
             connectedToPassageway.room.onRoomEnteredEvent.Invoke(connectedToPassageway);
+            StartCoroutine(C_WarpDelay(collision));
         }
     }
 
-    private void Update()
+    IEnumerator C_WarpDelay(Collider2D collision)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            connectedToPassageway.room.onRoomEnteredEvent.Invoke(connectedToPassageway);
-        }
+        yield return new WaitForSeconds(1f);
+        collision.gameObject.transform.position = connectedToPassageway.playerDestinationPosition.position;
     }
 }

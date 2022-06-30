@@ -17,8 +17,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public Animator transition;
-    public float timeForTransition;
+    public Animator transitionAnim;
 
     private void Awake()
     {
@@ -33,9 +32,10 @@ public class UIManager : MonoBehaviour
 
     IEnumerator LoadRoom()
     {
-        //Play anim
-        transition.SetTrigger("Start");
-        //Wait
-        yield return new WaitForSeconds(timeForTransition);
+        PlayerManager.instance.playerMovement.isMoving = false;
+        transitionAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);        
+        PlayerManager.instance.playerMovement.isMoving = true;
+        transitionAnim.SetTrigger("Start");
     }
 }

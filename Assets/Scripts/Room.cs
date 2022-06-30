@@ -28,7 +28,7 @@ public class Room : MonoBehaviour
 
     private void OnEnable()
     {
-        onRoomEnteredEvent.AddListener(UIManager.instance.RoomEntered);
+        onRoomEnteredEvent.AddListener(UIManager.instance.RoomEntered);        
         foreach(PassagewayInfo passagewayInfo in passagewayInfos)
         {
             Room room = this;
