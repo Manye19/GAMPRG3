@@ -4046,8 +4046,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23cb11f69bd25c4e877f320d6307e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  passagewayInfos: []
+  roomName: Town
+  passagewayInfos:
+  - name: Town to Farm
+    passageway: {fileID: 1731686286}
+    playerDestinationPosition: {fileID: 1929394222}
+    connectedToPassageway: {fileID: 861092614}
 --- !u!1 &984916735
 GameObject:
   m_ObjectHideFlags: 0
@@ -36625,7 +36629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1432a0893b6b5ce4ea8c728fdf5a2c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 0}
+  transitionAnim: {fileID: 1744846160}
 --- !u!1 &1647704435
 GameObject:
   m_ObjectHideFlags: 0
@@ -36891,16 +36895,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23cb11f69bd25c4e877f320d6307e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
+  roomName: Farm
   passagewayInfos:
   - name: Farm to Town
     passageway: {fileID: 861092614}
     playerDestinationPosition: {fileID: 1897036593}
     connectedToPassageway: {fileID: 1731686286}
-  - name: Town to Farm
-    passageway: {fileID: 1731686286}
-    playerDestinationPosition: {fileID: 1929394222}
-    connectedToPassageway: {fileID: 861092614}
 --- !u!1 &1744846159
 GameObject:
   m_ObjectHideFlags: 0
@@ -39356,7 +39356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041844826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
