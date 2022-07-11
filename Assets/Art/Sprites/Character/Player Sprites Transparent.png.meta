@@ -1,0 +1,1134 @@
+fileFormatVersion: 2
+guid: 8a422f399192c2842a66227038f39c4b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player Sprites Transparent_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 465
+        width: 41
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a980ba726dcd3c47b72069b18b269a3
+      internalID: 499130833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 465
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24be88871df9a34e8197170813ace78
+      internalID: -1309662165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 465
+        width: 41
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7440bcbc0b8ffe843beef34a4c51825c
+      internalID: 1235973928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 465
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d675624f83b97f34cabc99b44c8bc7c2
+      internalID: -938490279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_4
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 465
+        width: 42
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0ceb614c113c64e875b1dc5d32a1c5
+      internalID: 417633675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 465
+        width: 37
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1094b7bb0d69aa1449b0ef7a7a1aaab9
+      internalID: 1231923950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_6
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 465
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cc6c8ba316de3429875709454bf81c
+      internalID: 1901445473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_7
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 465
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b89d0c42b7b714d848c5184a2e1e7d
+      internalID: 686781707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 374
+        width: 36
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b518c0f9504f840a96d2aa402524bd
+      internalID: -1693855801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 374
+        width: 41
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0018e5676d626da40ae310706fc70c77
+      internalID: -312292464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_10
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 374
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af3dc0c195c3de41b74ae410aa25251
+      internalID: -389155332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 374
+        width: 41
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75625bb36349d304ca989ee67d39b0d9
+      internalID: -1195753402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 374
+        width: 36
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3426b91c2c9af48bb303153c325c0b
+      internalID: -1212607866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 374
+        width: 37
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aee8fc5ff203f94983f39f36afe8536
+      internalID: 1080047156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_14
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 374
+        width: 38
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c19dfa537c2b99429edcdaad26c9cd4
+      internalID: -2003870568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_15
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 374
+        width: 38
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2d3cc027892f74796b6b0e1d7f849d
+      internalID: -967958022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 282
+        width: 41
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090532421c3ed9544aedf52cbc870b42
+      internalID: -1971745426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_17
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 282
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba7d3e8c3d026842941158bef682902
+      internalID: 619906308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_18
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 282
+        width: 41
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208541b4cce115c48b4fd79ff23b3fea
+      internalID: -1540922111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 282
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430f800ac5a8cb748b0dff935c5e7ab0
+      internalID: 308035173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_20
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 282
+        width: 139
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288a4e454ddcdb04ea4b6b96e31be4e1
+      internalID: 1874700614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 282
+        width: 38
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb09d547aa7d9c4aa5e6a075d1f25fe
+      internalID: 1440068295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_22
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 191
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020cfc240096115449872d183b4ef50d
+      internalID: -109192297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_23
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 191
+        width: 41
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e15d878199a8946ad34d8c3f324436
+      internalID: -1647003982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_24
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 191
+        width: 36
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226938490000e404aab61d9f0581d15c
+      internalID: -171318360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_25
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 191
+        width: 41
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70dc231af7b823e4a8ddd8d6a30197b1
+      internalID: 1863333756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_26
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 191
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33184e947dc43f49b37f6493699c1bb
+      internalID: 383943828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_27
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 191
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a371f11cfe21d3f4ea44f82e95d4a6f1
+      internalID: 514814386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_28
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 191
+        width: 36
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb2abd51ba25ef46a98c1b9a16a2fe5
+      internalID: 247006564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_29
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 202
+        width: 41
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629c8662ad2b7bf40bc9a8ef26bc3d02
+      internalID: 2021227366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 99
+        width: 34
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb50ef72638c4043839ccd84e31c83e
+      internalID: 288331615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_31
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 99
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3642163e4810044ea04c76c710d1335
+      internalID: -307010020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_32
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 99
+        width: 32
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1985683aa23c1574b91c01989dd2dfef
+      internalID: 1055842185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_33
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 99
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33904ab1c6d6f04d93de614cc29d65a
+      internalID: -1362280979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_34
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 99
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe93928fa263e92449e65b5a0f657a55
+      internalID: -355473123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_35
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 99
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29deec004a1b22f4abed13a28445d9b1
+      internalID: 1715579668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_36
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 99
+        width: 36
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a29244dd2fae64484bcbff5716b7d0
+      internalID: -74189240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_37
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 99
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37503c67aec2d547b6e0991c548d043
+      internalID: 757698271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_38
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 8
+        width: 46
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c010a3f543bc346871486e0279f208
+      internalID: -1687525744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_39
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 8
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d3554e3b89304499100b95cd493dab
+      internalID: -1318401213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_40
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 8
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6994c191447b44144bcbc4e3fb6d842f
+      internalID: -515473455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_41
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 8
+        width: 41
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc49cd711f996e94da5f864f0d3df115
+      internalID: 1164967519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_42
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 8
+        width: 42
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043a4393304acf741a03ce5136a0c055
+      internalID: -146948115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_43
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 8
+        width: 41
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807eda4e618a8304ab789c11883c2d63
+      internalID: 194740644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_44
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 8
+        width: 38
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c107997851ef3fe46b2b835bb7b7ba69
+      internalID: -1473542132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Sprites Transparent_45
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 8
+        width: 38
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc0727bf8a072d4ba66e58033f5fe4d
+      internalID: 55292597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Player Sprites Transparent_20: 1874700614
+      Player Sprites Transparent_5: 1231923950
+      Player Sprites Transparent_29: 2021227366
+      Player Sprites Transparent_13: 1080047156
+      Player Sprites Transparent_44: -1473542132
+      Player Sprites Transparent_17: 619906308
+      Player Sprites Transparent_8: -1693855801
+      Player Sprites Transparent_12: -1212607866
+      Player Sprites Transparent_33: -1362280979
+      Player Sprites Transparent_39: -1318401213
+      Player Sprites Transparent_43: 194740644
+      Player Sprites Transparent_4: 417633675
+      Player Sprites Transparent_7: 686781707
+      Player Sprites Transparent_41: 1164967519
+      Player Sprites Transparent_1: -1309662165
+      Player Sprites Transparent_36: -74189240
+      Player Sprites Transparent_24: -171318360
+      Player Sprites Transparent_18: -1540922111
+      Player Sprites Transparent_15: -967958022
+      Player Sprites Transparent_30: 288331615
+      Player Sprites Transparent_3: -938490279
+      Player Sprites Transparent_25: 1863333756
+      Player Sprites Transparent_19: 308035173
+      Player Sprites Transparent_0: 499130833
+      Player Sprites Transparent_28: 247006564
+      Player Sprites Transparent_35: 1715579668
+      Player Sprites Transparent_10: -389155332
+      Player Sprites Transparent_6: 1901445473
+      Player Sprites Transparent_9: -312292464
+      Player Sprites Transparent_2: 1235973928
+      Player Sprites Transparent_42: -146948115
+      Player Sprites Transparent_14: -2003870568
+      Player Sprites Transparent_11: -1195753402
+      Player Sprites Transparent_34: -355473123
+      Player Sprites Transparent_31: -307010020
+      Player Sprites Transparent_26: 383943828
+      Player Sprites Transparent_37: 757698271
+      Player Sprites Transparent_32: 1055842185
+      Player Sprites Transparent_27: 514814386
+      Player Sprites Transparent_23: -1647003982
+      Player Sprites Transparent_40: -515473455
+      Player Sprites Transparent_38: -1687525744
+      Player Sprites Transparent_21: 1440068295
+      Player Sprites Transparent_22: -109192297
+      Player Sprites Transparent_16: -1971745426
+      Player Sprites Transparent_45: 55292597
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

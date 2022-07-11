@@ -32,8 +32,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 desiredPos = PlayerManager.instance.playerTransform.position;
         desiredPos.x = Mathf.Clamp(desiredPos.x, offSet.x + -panLimit.x, offSet.x + panLimit.x);
         desiredPos.y = Mathf.Clamp(desiredPos.y, offSet.y + -panLimit.y, offSet.y + panLimit.y);
-        desiredPos.z = transform.position.z;
-        Debug.Log(desiredPos);
+        desiredPos.z = transform.position.z;        
         transform.position = desiredPos;
     }
 }
