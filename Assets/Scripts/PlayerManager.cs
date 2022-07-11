@@ -21,10 +21,12 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
     public PlayerMovement playerMovement;
+    public Transform playerTransform { get; private set; }
 
     private void Awake()
     {
         _instance = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
+        playerTransform = player.transform;
     }
 }
