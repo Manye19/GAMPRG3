@@ -8,8 +8,7 @@ public class BreakableObject : Unit
     public string objName;
     public int HP;
 
-    [NonReorderable] public List<BreakableObjectDrop> breakableObjectDrops = new List<BreakableObjectDrop>();
-    //public BreakableObjectHitEvent onBreakableObjectHitEvent = new BreakableObjectHitEvent();
+    [NonReorderable] public List<BreakableObjectDrop> breakableObjectDrops = new List<BreakableObjectDrop>();    
 
     protected override void OnEnable()
     {
@@ -34,10 +33,9 @@ public class BreakableObject : Unit
         for (int i = 0; i < amount; i++)
         {
             Item item = Instantiate(itemPrefab);
-            //item.transform.position = (Vector2)transform.position;
-            item.transform.position = new Vector2(GetRand(-transform.localPosition.x, transform.localPosition.x), transform.localPosition.y);
-            item.so_Item = breakableObjectDrop.so_Item;
-            item.GetComponent<SpriteRenderer>().sprite = breakableObjectDrop.so_Item.icon;
+            item.transform.position = (Vector2)transform.position;            
+            item.itemScriptableObject = breakableObjectDrop.itemScriptableObject;
+            item.GetComponent<SpriteRenderer>().sprite = breakableObjectDrop.itemScriptableObject.icon;
         }
     }
 

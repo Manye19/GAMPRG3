@@ -17,8 +17,5 @@ public class ToolUsedEvent : UnityEvent<float> { };
 public class HealthModifyEvent : UnityEvent<float> { };
 public class DeathEvent : UnityEvent { };
 
-/*Implement BreakableObject Event
-public class BreakableObjectHitEvent : UnityEvent <GameObject, Transform> { };*/
-
 //Implement Inventory Events
-public class AddItemEvent : UnityEvent<GameObject, SO_Item, string, int> { };
+public class AddItemEvent : UnityEvent<GameObject, ItemScriptableObject, string, int> { };

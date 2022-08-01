@@ -47,7 +47,7 @@ public class Inventory : MonoBehaviour
         onAddItemEvent.RemoveListener(AddItem);
     }
 
-    void AddItem(GameObject GO_Item, SO_Item so_Item, string p_name, int p_amount)
+    void AddItem(GameObject GO_Item, ItemScriptableObject so_Item, string p_name, int p_amount)
     {
         if (GO_Item.TryGetComponent(out Item item))
         {
@@ -58,15 +58,15 @@ public class Inventory : MonoBehaviour
             }
             else
             {
-                ItemData foundItem = GetItem(so_Item.name);                
+                ItemData foundStackableItem = GetStackableItem(so_Item.name);
                 // get found item; increment it thru back and front end
-                foundItem.itemUI.UpdateText(p_amount);
-                foundItem.amount += p_amount;
+                foundStackableItem.itemUI.UpdateText(p_amount);
+                foundStackableItem.amount += p_amount;
             }
         }
     }
 
-    public static ItemData GetItem(string p_item)
+    public static ItemData GetStackableItem(string p_item)
     {
         for (int i = 0; i < Inventory.instance.stackableItems.Count; i++)
         {

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public SO_Item so_Item;
-    public GameObject itemSelf;
+    public ItemScriptableObject itemScriptableObject;
+    public GameObject itemPrefab;
     public string itemName;
     public Sprite UISprite;
     public bool isStackable;
@@ -43,7 +43,7 @@ public class Item : MonoBehaviour
         else
         {
             timer = 2f;
-            Inventory.instance.onAddItemEvent.Invoke(itemSelf, so_Item, itemName, 1);
+            Inventory.instance.onAddItemEvent.Invoke(itemPrefab, itemScriptableObject, itemName, 1);
             Destroy(gameObject);
         }
     }

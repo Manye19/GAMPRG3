@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class BreakableObjectDrop
 {
-    public SO_Item so_Item;
+    public ItemScriptableObject itemScriptableObject;
     public int minAmount;
     public int maxAmount;
 }

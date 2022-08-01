@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemData 
 {
     public string name;
-    public SO_Item so_Item;
+    public ItemScriptableObject so_Item;
     public int amount;
 
     public ItemUI itemUI;

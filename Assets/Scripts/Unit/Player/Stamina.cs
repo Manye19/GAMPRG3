@@ -42,6 +42,10 @@ public class Stamina : MonoBehaviour
             currentStamina -= p_amount;
             OnStaminaModifiedEvent.Invoke(currentStamina, maxStamina);
         }
-        if (currentStamina <= 0) OnStaminaDepletedEvent.Invoke();
+
+        if (currentStamina <= 0)
+        {
+            OnStaminaDepletedEvent.Invoke();
+        }
     }
 }
