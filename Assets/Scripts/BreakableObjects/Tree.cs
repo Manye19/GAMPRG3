@@ -5,11 +5,13 @@ using UnityEngine;
 public class Tree : BreakableObject
 {
     Health health;
+    [SerializeField] GameObject treeBody;
+    [SerializeField] GameObject treeStump;
     // Start is called before the first frame update
     protected override void Start()
     {
         objName = "Tree";
-        HP = 3;
+        HP = 5;
     }
     protected override void OnEnable()
     {
@@ -31,6 +33,7 @@ public class Tree : BreakableObject
 
             if (HP <= 0)
             {
+                treeBody.gameObject.SetActive(false);
                 health.onDeathEvent.Invoke();
                 Destroy(this.gameObject);
             }

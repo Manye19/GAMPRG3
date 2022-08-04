@@ -306,6 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 313ae4e9cdca2bb4f9aca06d5686bba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventorySlotsPanel: {fileID: 0}
+  itemUIPrefab: {fileID: 0}
 --- !u!4 &36900677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2838948822329716480, guid: b853e67b4ec25c4469f031c4df8018cc, type: 3}
@@ -12212,6 +12214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 328076905}
+  InventoryUI: {fileID: 0}
 --- !u!4 &484266745
 Transform:
   m_ObjectHideFlags: 0
@@ -18000,6 +18003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2140864305}
   playerMovement: {fileID: 2140864306}
+  playerStamina: {fileID: 0}
 --- !u!4 &1918701040
 Transform:
   m_ObjectHideFlags: 0
@@ -43026,8 +43030,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa9d37075b074c4c98c3723f4d2b493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 0}
   objName: Dirt
   HP: 0
+  breakableObjectDrops: []
   dirtTilemap: {fileID: 2120737372}
   plowedField: {fileID: 11400000, guid: 780c428893f45b84791dcc2fc40c5bf9, type: 2}
 --- !u!1 &2140864305
@@ -43216,6 +43222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef09fb750ea9dfc49824e8a4704cbd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staminaCost: 0
   interactorPivot: {fileID: 169182170}
   interactor: {fileID: 478497428}
   equippedObject: {fileID: 0}
@@ -43238,7 +43245,8 @@ MonoBehaviour:
   - {fileID: 7601700571179007867, guid: 926ba8f9e2c988840a97f8442380377a, type: 3}
   - {fileID: 2848428492594338877, guid: 48bace377570b094b8a3adc9ffc68bab, type: 3}
   - {fileID: 5852199720496005880, guid: ad4f508c158b20c43b56fd579e047585, type: 3}
-  inventoryItems: []
+  unstackableItems: []
+  stackableItems: []
   inventorySlots: 10
   inventoryUI: {fileID: 23639539}
 --- !u!1001 &984547548972993262
