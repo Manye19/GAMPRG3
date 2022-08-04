@@ -7,11 +7,12 @@ public class Tree : BreakableObject
     Health health;
     [SerializeField] GameObject treeBody;
     [SerializeField] GameObject treeStump;
+
     // Start is called before the first frame update
     void Start()
     {
         objName = "Tree";
-        HP = 5;
+        HP = 8;
     }
     protected override void OnEnable()
     {
@@ -33,9 +34,13 @@ public class Tree : BreakableObject
 
             if (HP <= 0)
             {
+                Destroy(this.gameObject);
+                health.onDeathEvent.Invoke();
+            }
+            else if(HP == 3)
+            {
                 treeBody.gameObject.SetActive(false);
                 health.onDeathEvent.Invoke();
-                Destroy(this.gameObject);
             }
         }
     }
