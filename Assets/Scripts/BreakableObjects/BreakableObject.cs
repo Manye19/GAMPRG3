@@ -35,7 +35,7 @@ public class BreakableObject : Unit
             Item item = Instantiate(itemPrefab);
             item.transform.position = (Vector2)transform.position;            
             item.itemScriptableObject = breakableObjectDrop.itemScriptableObject;
-            item.GetComponent<SpriteRenderer>().sprite = breakableObjectDrop.itemScriptableObject.icon;
+            item.GetComponent<SpriteRenderer>().sprite = breakableObjectDrop.itemScriptableObject.scriptableObjectIcon;
         }
     }
 

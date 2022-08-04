@@ -1,35 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Health : MonoBehaviour
+public class Health : StatManager
 {
     public bool isAlive;
-    private float currentHealth;
-    private float maxHealth;
 
     public HealthModifyEvent onHealthModifyEvent = new HealthModifyEvent();
     public DeathEvent onDeathEvent = new DeathEvent();
 
-    public void SetValues(float p_maxHealth)
-    {
-        maxHealth = p_maxHealth;
-    }
-
-    public void Init()
+    public override void Init()
     {
         isAlive = true;
-        currentHealth = maxHealth;
+        maxStat = 100;
+        base.Init();
     }
 
-    public void ModifyHealth(float p_float)
+    public void ModifyHealth(float p_amount)
     {
-        currentHealth += p_float;
-        // check if dead; HP <= 0
-        if (currentHealth <= 0)
-        {
-            isAlive = false;
-            onDeathEvent.Invoke();
-        }
+        ModifyStat(p_amount, onHealthModifyEvent, onDeathEvent);
     }
 }

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ToolController : MonoBehaviour
 {
-    public ToolUsedEvent OnToolUsedEvent = new ToolUsedEvent();
+    private bool canUse = true;
+
+    public ToolUsedEvent onToolUsedEvent = new ToolUsedEvent();
     public float staminaCost;
 
     private PlayerMovement movementScript;
@@ -12,7 +14,7 @@ public class ToolController : MonoBehaviour
     public Transform interactor;
     public GameObject equippedObject;
     public Transform toolSpawnPoint;
-    public Inventory inventoryScript;
+    public InventoryManager inventoryScript;
 
     public float interactorRadius= 0.3f;
         
@@ -28,13 +30,13 @@ public class ToolController : MonoBehaviour
 
     private void OnEnable()
     {
-        OnToolUsedEvent.AddListener(PlayerManager.instance.playerStamina.ModifyStamina);
+        onToolUsedEvent.AddListener(PlayerManager.instance.playerStamina.ModifyStamina);
     }
 
-    //private void OnDisable()
-    //{
-    //    OnToolUsedEvent.RemoveListener(PlayerManager.instance.playerStamina.ModifyStamina);
-    //}
+    private void OnDisable()
+    {
+        onToolUsedEvent.RemoveListener(PlayerManager.instance.playerStamina.ModifyStamina);
+    }
 
     // Update is called once per frame
     void Update()
@@ -169,6 +171,11 @@ public class ToolController : MonoBehaviour
         }
     }
 
+    public void CanUseUpdate(bool p_bool)
+    {
+        canUse = p_bool;
+    }
+
     void RotateInteractorPivot()
     {
         if (movementScript.movement.x > 0)
@@ -188,23 +195,24 @@ public class ToolController : MonoBehaviour
             interactorPivot.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
-
     
-
     void ToolInteract()
     {
-        OnToolUsedEvent.Invoke(staminaCost);
-
-        Collider2D[] hitObjects = Physics2D.OverlapCircleAll(interactor.position, interactorRadius);
-
-        foreach (Collider2D obj in hitObjects)
+        if (canUse)
         {
-            if (equippedObject != null)
+            onToolUsedEvent.Invoke(-staminaCost);
+
+            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(interactor.position, interactorRadius);
+
+            foreach (Collider2D obj in hitObjects)
             {
-                BreakableObject objScript = obj.GetComponent<BreakableObject>();
-                if (objScript)
+                if (equippedObject != null)
                 {
-                    objScript.OnHit(this.equippedObject, interactor.transform);
+                    BreakableObject objScript = obj.GetComponent<BreakableObject>();
+                    if (objScript)
+                    {
+                        objScript.OnHit(this.equippedObject, interactor.transform);
+                    }
                 }
             }
         }

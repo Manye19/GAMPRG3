@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject player;
     public PlayerMovement playerMovement;
     public Transform playerTransform { get; private set; }
+    public ToolController playerToolController;
     public Stamina playerStamina;
 
     private void Awake()

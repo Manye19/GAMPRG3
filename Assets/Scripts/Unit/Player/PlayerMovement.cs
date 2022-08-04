@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (isMoving)
+        {
             rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
+        }
     }
 }

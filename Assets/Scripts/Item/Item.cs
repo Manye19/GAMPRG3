@@ -10,7 +10,6 @@ public class Item : MonoBehaviour
     public string itemName;
     public Sprite UISprite;
     public bool isStackable;
-    private bool isMagnetizing = true;
     private float timer;
     private Transform playerTransform;
 
@@ -43,7 +42,7 @@ public class Item : MonoBehaviour
         else
         {
             timer = 2f;
-            Inventory.instance.onAddItemEvent.Invoke(itemPrefab, itemScriptableObject, itemName, 1);
+            InventoryManager.instance.onAddItemEvent.Invoke(itemPrefab, itemScriptableObject, itemName, 1);
             Destroy(gameObject);
         }
     }

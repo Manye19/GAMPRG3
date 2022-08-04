@@ -33,9 +33,7 @@ public class Unit : MonoBehaviour
     public virtual void Init()
     {
         Health health = GetComponent<Health>();
-        health.onDeathEvent.AddListener(Death);
-        health.SetValues(maxHealth);
-        health.Init();
+        health.onDeathEvent.AddListener(Death);        
     }
     public virtual void Deinit()
     {

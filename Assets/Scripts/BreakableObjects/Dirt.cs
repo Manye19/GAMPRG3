@@ -9,7 +9,7 @@ public class Dirt : BreakableObject
 
     public TileBase plowedField;
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         objName = "Dirt";
     }

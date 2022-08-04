@@ -6,13 +6,13 @@ public class SliderBarUI : MonoBehaviour
 {
     public Slider slider;
     private float current;
-    private float currentMax;
+    private float max;
 
-    public void UpdateBar(float p_current, float p_currentMax)
+    public void UpdateBar(float p_current, float p_max)
     {
         current = p_current;
-        currentMax = p_currentMax;
-        slider.value = current / currentMax;        
+        max = p_max;
+        slider.value = current / max;        
     }
 
     public void SetMaxBar(float p_value)

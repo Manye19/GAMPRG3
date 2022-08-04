@@ -6,7 +6,7 @@ public class Tree : BreakableObject
 {
     Health health;
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         objName = "Tree";
         HP = 3;

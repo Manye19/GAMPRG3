@@ -17,12 +17,12 @@ public class InventoryUI : MonoBehaviour
 
     public void GenerateInventoryUIs()
     {
-        for (int i = 0; i < Inventory.instance.stackableItems.Count; i++)
+        for (int i = 0; i < InventoryManager.instance.stackableItems.Count; i++)
         {
-            ItemData currentItemData = Inventory.instance.stackableItems[i];
+            ItemData currentItemData = InventoryManager.instance.stackableItems[i];
             ItemUI newItemUI = Instantiate(itemUIPrefab);
             newItemUI.transform.SetParent(inventorySlotsPanel, false);
-            newItemUI.Init("0", currentItemData.so_Item.icon);
+            newItemUI.Init("0", currentItemData.so_Item.scriptableObjectIcon);
             currentItemData.SetItemUI(newItemUI);
         }
     }
