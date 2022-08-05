@@ -51,7 +51,7 @@ public class Stamina : StatManager
     public void ModifyStamina(float p_amount)
     {
         ModifyStat(p_amount, OnStaminaModifiedEvent, OnStaminaDepletedEvent);
-        Debug.Log("Stamina: " + currentStat);        
+        //Debug.Log("Stamina: " + currentStat);        
     }
 
     public void PenalizeStamina()
