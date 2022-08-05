@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class Stamina : StatManager
 {
-    [SerializeField] private float staminaPenalty;
     public float currentMaxStamina { get; private set; }
     private bool isPenalized = false;
 
@@ -31,12 +30,7 @@ public class Stamina : StatManager
     }
 
     private void OnDisable()
-    {
-        //Update Stamina Bar
-        OnStaminaModifiedEvent.RemoveListener(UIManager.instance.staminaBarUI.UpdateBar);
-
-        TimeManager.instance.onDayChangingEvent.AddListener(StaminaRegen);
-        
+    {        
         //Unlisten to Stamina <= 0
         OnStaminaDepletedEvent.RemoveListener(PenalizeStamina);
     }
@@ -56,7 +50,7 @@ public class Stamina : StatManager
 
     public void PenalizeStamina()
     {
-        currentMaxStamina -= currentMaxStamina * staminaPenalty;
+        currentMaxStamina -= currentMaxStamina * 0.3f;
         isPenalized = true;
         UIManager.instance.staminaBarUI.UpdateBar(currentStat, maxStat);
     }
@@ -71,7 +65,7 @@ public class Stamina : StatManager
         {
             if (currentStat < maxStat)
             {
-                currentMaxStamina += currentMaxStamina * staminaPenalty;
+                currentMaxStamina += currentMaxStamina * 0.5f;
             }
             
             if(currentMaxStamina > maxStat)

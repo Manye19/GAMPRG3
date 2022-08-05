@@ -129,7 +129,7 @@ MonoBehaviour:
   objName: Rock
   HP: 1
   breakableObjectDrops:
-  - so_Item: {fileID: 11400000, guid: a539084a8e0968f43a27b37da367b1e8, type: 2}
+  - itemScriptableObject: {fileID: 11400000, guid: a539084a8e0968f43a27b37da367b1e8, type: 2}
     minAmount: 1
     maxAmount: 3
 --- !u!114 &-7607182561566388022
