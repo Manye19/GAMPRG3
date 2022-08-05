@@ -29,7 +29,7 @@ public class TimeManager : MonoBehaviour
     [HideInInspector] public static float sunriseHour = 6;
     public int dayCount;
     [SerializeField] private int startHour;
-    [SerializeField] private int endHour;
+    
 
     public static int minute;
     public static int minuteByTens;
@@ -102,7 +102,7 @@ public class TimeManager : MonoBehaviour
 
     private void OnTimeCheck(int p_hour, int p_minuteByTens)
     {
-        if (p_hour == endHour)
+        if (p_hour == SVConstants.END_HOUR)
         {
             hour = startHour;
             EndDay();
