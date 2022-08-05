@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class ClockUI : MonoBehaviour
 {
     [SerializeField] private RectTransform hand;
-    const float hoursToDegrees = 360 / 24;
+    const float hoursToDegrees = 220 / 24;
 
     private void OnEnable()
     {
-        TimeManager.onTimeChangedEvent.AddListener(UpdateTime);
+        TimeManager.onHourChangedEvent.AddListener(UpdateTime);
     }
 
     private void OnDisable()
     {
-        TimeManager.onTimeChangedEvent.RemoveListener(UpdateTime);
+        TimeManager.onHourChangedEvent.RemoveListener(UpdateTime);
     }
 
-    private void UpdateTime(int hour, int minuteByTens)
+    private void UpdateTime(int hour)
     {
-        hand.localRotation = Quaternion.Euler(0, 0, 90 + hoursToDegrees * ((hour + TimeManager.hoursInDay + TimeManager.sunriseHour) % TimeManager.hoursInDay));
+        hand.localRotation = Quaternion.Euler(0, 0, 90 + hoursToDegrees * ((hour + TimeManager.hoursInDay - TimeManager.sunriseHour) % TimeManager.hoursInDay));
     }
 }

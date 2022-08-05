@@ -5,16 +5,24 @@ using UnityEngine;
 public class Tree : BreakableObject
 {
     Health health;
+    private Animator animator;
     [SerializeField] GameObject treeBody;
     [SerializeField] GameObject treeStump;
+
+    protected override void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {
         objName = "Tree";
-        HP = 5;
+        HP = 8;
     }
     protected override void OnEnable()
     {
+        
         health = GetComponent<Health>();
         health.onDeathEvent.AddListener(SpawnDrops);
     }
@@ -29,14 +37,30 @@ public class Tree : BreakableObject
     {
         if (tool.GetComponent<Axe>())
         {            
-            this.HP--;
+            HP--;
 
             if (HP <= 0)
             {
-                treeBody.gameObject.SetActive(false);
                 health.onDeathEvent.Invoke();
-                Destroy(this.gameObject);
+                Destroy(gameObject);
+            }
+            else if(HP == 3)
+            {
+                if (transform.position.x > PlayerManager.instance.playerTransform.position.x)
+                {
+                    animator.SetTrigger("RFall");
+                }
+                else
+                {
+                    animator.SetTrigger("LFall");
+                }
+                health.onDeathEvent.Invoke();
             }
         }
+    }
+
+    public void RemoveBody()
+    {
+        treeBody.gameObject.SetActive(false);
     }
 }

@@ -23,13 +23,13 @@ public class TimeManager : MonoBehaviour
     public static TimeChangedEvent onTimeChangedEvent = new TimeChangedEvent();
     public DayEndedEvent onDayEndedEvent = new DayEndedEvent();
     public DayChangingEvent onDayChangingEvent = new DayChangingEvent();
-    public HourChangedEvent onHourChangedEvent = new HourChangedEvent();
+    public static HourChangedEvent onHourChangedEvent = new HourChangedEvent();
     public PauseGameTimeEvent onPauseGameTimeEvent = new PauseGameTimeEvent();
 
     [HideInInspector] public static float sunriseHour = 6;
     public int dayCount;
     [SerializeField] private int startHour;
-    [SerializeField] private int endHour;
+    
 
     public static int minute;
     public static int minuteByTens;
@@ -50,6 +50,7 @@ public class TimeManager : MonoBehaviour
         minute = 0;
         hour = startHour;
         coroutineTime = DoTimerCoroutine();
+        onHourChangedEvent.Invoke(hour);
         StartCoroutine(coroutineTime);
     }
 
@@ -87,7 +88,7 @@ public class TimeManager : MonoBehaviour
 
                 if (hour > hoursInDay)
                 {
-                    hour = 0;
+                    hour = 1;
                 }
 
                 onHourChangedEvent.Invoke(hour);
@@ -101,10 +102,10 @@ public class TimeManager : MonoBehaviour
 
     private void OnTimeCheck(int p_hour, int p_minuteByTens)
     {
-        if (p_hour == endHour)
+        if (p_hour == SVConstants.END_HOUR)
         {
             hour = startHour;
-            //onDayEndedEvent.Invoke
+            EndDay();
         }
     }
 
@@ -126,12 +127,11 @@ public class TimeManager : MonoBehaviour
         onHourChangedEvent.Invoke(hour);
         onTimeChangedEvent.Invoke(hour, minuteByTens);
         dayCount++;
-
     }
 
     private void SetPauseGame(bool p_bool)
     {
-        Debug.Log("Time is: " + p_bool);
+        //Debug.Log("Time is: " + p_bool);
         DoTimer = p_bool;
         if (coroutineTime != null)
         {

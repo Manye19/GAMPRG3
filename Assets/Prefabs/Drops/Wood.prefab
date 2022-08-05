@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c483695599ea380448a643f73ad2dde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so_Item: {fileID: 11400000, guid: 4e8a0f52a26d8a448b410010a9f1b2c8, type: 2}
-  itemSelf: {fileID: 8607408290272938723}
+  itemScriptableObject: {fileID: 11400000, guid: 4e8a0f52a26d8a448b410010a9f1b2c8, type: 2}
+  itemPrefab: {fileID: 8607408290272938723}
   itemName: Wood
   UISprite: {fileID: -2100049744, guid: 5b21aa1abea10f34b82d673a5a298ecf, type: 3}
   isStackable: 1

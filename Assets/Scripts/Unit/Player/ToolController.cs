@@ -31,12 +31,7 @@ public class ToolController : MonoBehaviour
     private void OnEnable()
     {
         onToolUsedEvent.AddListener(PlayerManager.instance.playerStamina.ModifyStamina);
-    }
-
-    private void OnDisable()
-    {
-        onToolUsedEvent.RemoveListener(PlayerManager.instance.playerStamina.ModifyStamina);
-    }
+    }    
 
     // Update is called once per frame
     void Update()
