@@ -39,12 +39,7 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         TimeManager.instance.onDayEndedEvent.AddListener(DayEnd);
-    }
-
-    private void OnDisable()
-    {
-        TimeManager.instance.onDayEndedEvent.RemoveListener(DayEnd);
-    }
+    }    
 
     public void RoomEntered(Passageway p_passageway)
     {
