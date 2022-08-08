@@ -26,12 +26,13 @@ public class InventoryUI : MonoBehaviour
             currentItemData.SetItemUI(newItemUI);
         }
     }
-
+    
     public void AddToUI(Sprite UISprite)
     {
         foreach(Transform slot in this.gameObject.transform)
         {
             Image imageComponent = slot.GetChild(0).GetComponent<Image>();
+            
 
             if(!imageComponent.enabled)
             {

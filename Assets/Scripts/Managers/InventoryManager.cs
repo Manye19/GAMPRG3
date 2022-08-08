@@ -33,7 +33,15 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < startingItems.Length; i++)
         {
-            AddItem(startingItems[i], null, null, 0);
+            Item item = startingItems[i].GetComponent<Item>();
+            if (item.isStackable)
+            {
+                AddItem(startingItems[i], item.itemScriptableObject, item.itemName, 10);
+            }
+            else
+            {
+                AddItem(startingItems[i], null, null, 0);
+            }
         }
     }
 

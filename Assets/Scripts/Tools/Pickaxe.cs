@@ -17,15 +17,4 @@ public class Pickaxe : Tools
         
     }
 
-    /*public override void OnUse()
-    {
-        StartCoroutine(ShowAndHideSprite());
-    }
-
-    IEnumerator ShowAndHideSprite()
-    {
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        yield return new WaitForSeconds(0.2f);
-        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-    }*/
 }
