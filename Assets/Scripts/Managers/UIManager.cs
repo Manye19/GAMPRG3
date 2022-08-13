@@ -21,9 +21,18 @@ public class UIManager : MonoBehaviour
 
     [Header("Assorted Objects")]
     public Animator transitionAnim;
-    public GameObject InventoryUI;
-    public GameObject BedUI;
+    public GameObject inventoryUI;
+    public GameObject bedUI;
+    public GameObject shopUI;
+    public GameObject dayEndShipUI;
+    public TMP_Text goldAmountText;
+    public SliderBarUI healthBarUI;
     public SliderBarUI staminaBarUI;
+    public Transform itemsShippedParentPanel;
+    public ItemUI itemUIPrefab;
+    private bool isDepositedAvail;
+    public TMP_Text totalText;
+    private float sumOfGold;
 
     [Header("Text Objects")]
     public TMP_Text dayText;
@@ -60,7 +69,18 @@ public class UIManager : MonoBehaviour
     public void OpenBedUI(bool p_bool)
     {
         PlayerManager.instance.playerToolController.CanUseUpdate(!p_bool);
-        BedUI.SetActive(p_bool);
+        bedUI.SetActive(p_bool);
+    }
+
+    public void OpenShopUI(bool p_bool)
+    {
+        PlayerManager.instance.playerToolController.CanUseUpdate(!p_bool);
+        shopUI.SetActive(p_bool);
+    }
+
+    public void UpdateGoldUI(float p_current, float p_max)
+    {
+        goldAmountText.text = p_current.ToString();
     }
 
     public void DayEnd(bool p_isFainted, int p_dayCount)
@@ -74,6 +94,7 @@ public class UIManager : MonoBehaviour
         TimeManager.instance.onPauseGameTimeEvent.Invoke(false);
         PlayerManager.instance.playerToolController.CanUseUpdate(false);
         dayCountText.text = $"DAY {p_dayCount}";
+        
         if (!p_isFainted)
         {
             faintedText.text = "ENDED";
@@ -88,14 +109,44 @@ public class UIManager : MonoBehaviour
 
         yield return new WaitForSeconds(3.5f);
 
-        TimeManager.instance.onDayChangingEvent.Invoke();
-
         dayText.text = $"DAY {p_dayCount + 1}";
         dayCountText.text = $"DAY {p_dayCount + 1}";
         faintedText.text = "STARTS";
 
         yield return new WaitForSeconds(3.5f);
 
+        isDepositedAvail = ShippingBox.instance.IsItemDepositedAvail();
+        
+        if (isDepositedAvail)
+        {
+            for (int i = 0; i < ShippingBox.instance.itemsDeposited.Count; i++)
+            {
+                if (ShippingBox.instance.itemsDeposited[i].amount > 0)
+                {
+                    ItemData itemData = ShippingBox.instance.itemsDeposited[i];
+                    ItemUI itemUI = Instantiate(itemUIPrefab);
+                    itemUI.transform.SetParent(itemsShippedParentPanel, false);
+                    itemUI.Init(itemData.amount.ToString(), itemData.so_Item);
+                    itemData.SetItemUI(itemUI);
+                    float subTotal = itemData.amount * itemData.so_Item.sellPrice;
+                    sumOfGold += itemData.amount * itemData.so_Item.sellPrice;
+                    itemUI.itemSubTotalText.text = subTotal.ToString();
+                }
+            }
+            dayEndShipUI.SetActive(true);
+            totalText.text = sumOfGold.ToString();
+            Debug.Log(sumOfGold);
+            PlayerManager.instance.playerGold.ModifyGold(sumOfGold);
+            yield return new WaitForSeconds(5f);
+            for (int i = 0; i < itemsShippedParentPanel.childCount; i++)
+            {
+                Destroy(itemsShippedParentPanel.transform.GetChild(i).gameObject);
+            }
+            dayEndShipUI.SetActive(false);
+        }
+
+        sumOfGold = 0;
+        TimeManager.instance.onDayChangingEvent.Invoke();
         TimeManager.instance.NewDay();
 
         // Transition Anim END

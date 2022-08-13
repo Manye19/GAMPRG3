@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    protected float maxHealth;
+    protected Health unitHealth;
 
     protected virtual void Awake()
     {
@@ -12,7 +12,7 @@ public class Unit : MonoBehaviour
     }
     protected virtual void Start()
     {
-        Health health = GetComponent<Health>();
+        
     }
 
     protected virtual void OnEnable()

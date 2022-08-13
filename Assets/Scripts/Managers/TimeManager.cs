@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    public const int hoursInDay = 24, minutesInHour = 60, secondsInMinutes = 60;
-
     private static TimeManager _instance;
     public static TimeManager instance
     {
@@ -25,8 +23,7 @@ public class TimeManager : MonoBehaviour
     public DayChangingEvent onDayChangingEvent = new DayChangingEvent();
     public static HourChangedEvent onHourChangedEvent = new HourChangedEvent();
     public PauseGameTimeEvent onPauseGameTimeEvent = new PauseGameTimeEvent();
-
-    [HideInInspector] public static float sunriseHour = 6;
+    
     public int dayCount;
     [SerializeField] private int startHour;
     
@@ -56,6 +53,7 @@ public class TimeManager : MonoBehaviour
 
     private void OnEnable()
     {
+        PlayerManager.instance.playerHealth.onDeathEvent.AddListener(FaintedEndDay);
         Stamina.OnStaminaDepletedEvent.AddListener(FaintedEndDay);
         Bed.onBedInteractedEvent.AddListener(EndDay);
         onTimeChangedEvent.AddListener(OnTimeCheck);
@@ -64,6 +62,7 @@ public class TimeManager : MonoBehaviour
 
     private void OnDisable()
     {
+        PlayerManager.instance.playerHealth.onDeathEvent.RemoveListener(FaintedEndDay);
         Stamina.OnStaminaDepletedEvent.RemoveListener(FaintedEndDay);
         Bed.onBedInteractedEvent.RemoveListener(EndDay);
         onTimeChangedEvent.RemoveListener(OnTimeCheck);
@@ -82,11 +81,11 @@ public class TimeManager : MonoBehaviour
                 minuteByTens = minute;
             }
 
-            if (minute >= minutesInHour)
+            if (minute >= SVConstants.MINUTES_IN_HOUR)
             {
                 hour++;
 
-                if (hour > hoursInDay)
+                if (hour > SVConstants.HOURS_IN_DAY)
                 {
                     hour = 1;
                 }

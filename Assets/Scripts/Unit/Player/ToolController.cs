@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ToolController : MonoBehaviour
 {
@@ -13,10 +14,14 @@ public class ToolController : MonoBehaviour
     public Transform interactorPivot;
     public Transform interactor;
     public GameObject equippedObject;
+    private string equippedObjectName;
+    private GameObject swordGameObject;
     public Transform toolSpawnPoint;
     public InventoryManager inventoryScript;
 
     public float interactorRadius= 0.3f;
+    public float thrust;
+    public float knockBackTime;
         
     private void Awake()
     {
@@ -40,7 +45,7 @@ public class ToolController : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            if(equippedObject != null)
+            if (equippedObject != null)
             {
                 equippedObject.GetComponent<Tools>().OnUse();
 
@@ -97,7 +102,7 @@ public class ToolController : MonoBehaviour
         {
             if (inventoryScript.unstackableItems.Count >= 5)
             {
-                SetCurrentObject(4);
+                swordGameObject = SetCurrentObject(4);
             }
             else
             {
@@ -119,7 +124,7 @@ public class ToolController : MonoBehaviour
         {
             if (inventoryScript.unstackableItems.Count >= 7)
             {
-                SetCurrentObject(6);
+               SetCurrentObject(6);
             }
             else
             {
@@ -162,7 +167,7 @@ public class ToolController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            UIManager.instance.InventoryUI.SetActive(!UIManager.instance.InventoryUI.activeSelf);
+            UIManager.instance.inventoryUI.SetActive(!UIManager.instance.inventoryUI.activeSelf);
         }
     }
 
@@ -195,7 +200,10 @@ public class ToolController : MonoBehaviour
     {
         if (canUse)
         {
-            onToolUsedEvent.Invoke(-staminaCost);
+            if (!equippedObject.Equals(swordGameObject))
+            {
+                onToolUsedEvent.Invoke(-staminaCost);
+            }
 
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(interactor.position, interactorRadius);
 
@@ -206,46 +214,44 @@ public class ToolController : MonoBehaviour
                     BreakableObject objScript = obj.GetComponent<BreakableObject>();
                     if (objScript)
                     {
-                        objScript.OnHit(this.equippedObject, interactor.transform);
+                        objScript.OnHit(this.equippedObject, interactor.transform);                        
+                    }
+                    if (equippedObject.CompareTag("Seeds"))
+                    {
+                        ItemData foundStackableItem = InventoryManager.instance.GetStackableItem(equippedObjectName);
+                        GameObject foundUnstackableItem = InventoryManager.instance.GetUnstackableItem(equippedObjectName);
+                        InventoryManager.instance.RemoveItem(foundUnstackableItem, foundStackableItem.so_Item);
                     }
                 }
+                if (equippedObject.Equals(swordGameObject))
+                {
+                    if (obj.gameObject.CompareTag("Enemy"))
+                    {
+                        Health health = obj.GetComponent<Health>();
+                        Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+                        rb.isKinematic = false;
+                        Vector2 difference = (rb.transform.position - transform.position);
+                        difference = difference.normalized * thrust;
+                        rb.AddForce(difference, ForceMode2D.Impulse);
+                        StartCoroutine(KnockbackTimeCoroutine(health, rb));
+                    }
+                }                        
             }
         }
     }
 
-    //void ToolInteract()
-    //{
-    //    OnToolUsedEvent.Invoke(staminaCost);
-    //    BreakableObject targetBreakableObject = GetBreakableObject();
-    //    if (targetBreakableObject)
-    //    {
-    //        targetBreakableObject.onBreakableObjectHitEvent.Invoke(equippedObject, interactor.transform);
-    //    }
-    //}
+    private IEnumerator KnockbackTimeCoroutine(Health p_health, Rigidbody2D p_rb)
+    {
+        if (p_rb != null)
+        {
+            yield return new WaitForSeconds(knockBackTime);
+            p_rb.velocity = Vector2.zero;
+            p_rb.isKinematic = true;
+        }
+        p_health.ModifyHealth(-25f);
+    }
 
-    //public BreakableObject GetBreakableObject()
-    //{
-    //    Collider2D[] hitObjects = Physics2D.OverlapCircleAll(interactor.position, interactorRadius);
-    //    foreach (Collider2D obj in hitObjects)
-    //    {
-    //        if (obj != null)
-    //        {
-    //            if (obj.TryGetComponent(out BreakableObject breakableObject))
-    //            {
-    //                if (breakableObject.TryGetComponent(out Health health))
-    //                {
-    //                    if (health.isAlive)
-    //                    {
-    //                        return breakableObject;
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-    //    return null;
-    //}
-
-    void SetCurrentObject(int position)
+    private GameObject SetCurrentObject(int position)
     {
         if(equippedObject != null)
         {
@@ -255,10 +261,11 @@ public class ToolController : MonoBehaviour
         if (inventoryScript.unstackableItems.Count > 0)
         {
             equippedObject = Instantiate(inventoryScript.unstackableItems[position], interactorPivot, true);
-
+            equippedObjectName = equippedObject.GetComponent<Item>().itemName;
         }
         equippedObject.transform.position = toolSpawnPoint.position;
         equippedObject.transform.rotation = interactorPivot.rotation;
+        return equippedObject;
     }
 
     void OnDrawGizmosSelected()

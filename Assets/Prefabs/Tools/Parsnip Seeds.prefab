@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4202847177506632549}
   m_Layer: 0
   m_Name: Parsnip Seeds
-  m_TagString: Untagged
+  m_TagString: Seeds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc20387dfacfb144a81ee38e31bd68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemScriptableObject: {fileID: 0}
-  itemPrefab: {fileID: 0}
-  itemName: Parsnip Seed
+  itemScriptableObject: {fileID: 11400000, guid: 115d63f123c05744cb893e553a64c18d, type: 2}
+  itemPrefab: {fileID: 4202847177506632568}
+  itemName: Parsnip Seeds
   UISprite: {fileID: -531847441, guid: 7c5c4e350f293614589225fa5564b937, type: 3}
   isStackable: 0
   parsnipPlant: {fileID: 2032572512717109717, guid: 2472928a2aa3ea545bd26734c6a7079c, type: 3}
