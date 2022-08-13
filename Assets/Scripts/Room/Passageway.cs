@@ -23,6 +23,7 @@ public class Passageway : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             connectedToPassageway.room.onRoomEnteredEvent.Invoke(connectedToPassageway);
+            PlayerManager.onUpdateCurrentRoomIDEvent.Invoke(connectedToPassageway.room.currentRoomID);
             StartCoroutine(C_WarpDelay(collision));
         }
     }

@@ -20,6 +20,6 @@ public class ClockUI : MonoBehaviour
 
     private void UpdateTime(int hour)
     {
-        hand.localRotation = Quaternion.Euler(0, 0, 90 + hoursToDegrees * ((hour + TimeManager.hoursInDay - TimeManager.sunriseHour) % TimeManager.hoursInDay));
+        hand.localRotation = Quaternion.Euler(0, 0, 90 + hoursToDegrees * ((hour + SVConstants.HOURS_IN_DAY - SVConstants.SUNRISE_HOUR) % SVConstants.HOURS_IN_DAY));
     }
 }

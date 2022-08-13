@@ -22,14 +22,14 @@ public class InventoryUI : MonoBehaviour
             ItemData currentItemData = InventoryManager.instance.stackableItems[i];
             ItemUI newItemUI = Instantiate(itemUIPrefab);
             newItemUI.transform.SetParent(inventorySlotsPanel, false);
-            newItemUI.Init("0", currentItemData.so_Item.scriptableObjectIcon);
+            newItemUI.Init("0", currentItemData.so_Item);
             currentItemData.SetItemUI(newItemUI);
         }
     }
     
     public void AddToUI(Sprite UISprite)
     {
-        foreach(Transform slot in this.gameObject.transform)
+        foreach(Transform slot in gameObject.transform)
         {
             Image imageComponent = slot.GetChild(0).GetComponent<Image>();
             
@@ -38,7 +38,21 @@ public class InventoryUI : MonoBehaviour
             {
                 imageComponent.enabled = true;
                 imageComponent.sprite = UISprite;
+                break;
+            }
+        }
+    }
 
+    public void RemoveToUI(Sprite UISprite)
+    {
+        foreach(Transform slot in gameObject.transform)
+        {
+            Image imageComponent = slot.GetChild(0).GetComponent<Image>();
+
+            if (imageComponent.sprite.Equals(UISprite))
+            {
+                imageComponent.enabled = false;
+                imageComponent.sprite = null;
                 break;
             }
         }

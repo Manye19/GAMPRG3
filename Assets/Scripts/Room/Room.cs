@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Room : MonoBehaviour
 {
+    public int currentRoomID;
     public string roomName;
     public Transform camPanLimTransform;
     [HideInInspector] public Vector2 camPanLimit;

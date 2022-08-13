@@ -54087,7 +54087,8 @@ MonoBehaviour:
   HP: 0
   breakableObjectDrops: []
   dirtTilemap: {fileID: 2120737372}
-  plowedField: {fileID: 11400000, guid: 780c428893f45b84791dcc2fc40c5bf9, type: 2}
+  dirtPlowed: {fileID: 0}
+  dirtWatered: {fileID: 0}
 --- !u!114 &2120737375
 MonoBehaviour:
   m_ObjectHideFlags: 0

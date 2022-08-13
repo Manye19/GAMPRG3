@@ -342,8 +342,8 @@ TextureImporter:
         y: 577
         width: 16
         height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6204,9 +6204,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PC Computer - Stardew Valley - Background Trees & Plants-export_226: -1199868796
+      PC Computer - Stardew Valley - Background Trees & Plants-export_3: 1323188457
       PC Computer - Stardew Valley - Background Trees & Plants-export_83: 1421875419
-      PC Computer - Stardew Valley - Background Trees & Plants-export_103: -722488170
+      PC Computer - Stardew Valley - Background Trees & Plants-export_159: 1083822184
       PC Computer - Stardew Valley - Background Trees & Plants-export_178: -680478279
       PC Computer - Stardew Valley - Background Trees & Plants-export_46: -1750802538
       PC Computer - Stardew Valley - Background Trees & Plants-export_171: 390856881
@@ -6228,11 +6228,11 @@ TextureImporter:
       PC Computer - Stardew Valley - Background Trees & Plants-export_270: -1468892817
       PC Computer - Stardew Valley - Background Trees & Plants-export_35: 386453579
       PC Computer - Stardew Valley - Background Trees & Plants-export_234: -1888930364
-      PC Computer - Stardew Valley - Background Trees & Plants-export_14: -275699695
       PC Computer - Stardew Valley - Background Trees & Plants-export_119: 1918976727
+      PC Computer - Stardew Valley - Background Trees & Plants-export_14: -275699695
+      PC Computer - Stardew Valley - Background Trees & Plants-export_67: 1831732206
       PC Computer - Stardew Valley - Background Trees & Plants-export_221: -663734323
       PC Computer - Stardew Valley - Background Trees & Plants-export_165: -917140835
-      PC Computer - Stardew Valley - Background Trees & Plants-export_67: 1831732206
       PC Computer - Stardew Valley - Background Trees & Plants-export_19: 347244215
       PC Computer - Stardew Valley - Background Trees & Plants-export_86: -195771413
       PC Computer - Stardew Valley - Background Trees & Plants-export_167: 2024301505
@@ -6338,10 +6338,10 @@ TextureImporter:
       PC Computer - Stardew Valley - Background Trees & Plants-export_17: 454731554
       PC Computer - Stardew Valley - Background Trees & Plants-export_220: 863363418
       PC Computer - Stardew Valley - Background Trees & Plants-export_102: -994994898
-      PC Computer - Stardew Valley - Background Trees & Plants-export_95: 1990119351
-      PC Computer - Stardew Valley - Background Trees & Plants-export_27: -1532198061
-      PC Computer - Stardew Valley - Background Trees & Plants-export_174: 1697648015
       PC Computer - Stardew Valley - Background Trees & Plants-export_191: -630964490
+      PC Computer - Stardew Valley - Background Trees & Plants-export_174: 1697648015
+      PC Computer - Stardew Valley - Background Trees & Plants-export_27: -1532198061
+      PC Computer - Stardew Valley - Background Trees & Plants-export_95: 1990119351
       PC Computer - Stardew Valley - Background Trees & Plants-export_194: 1201038752
       PC Computer - Stardew Valley - Background Trees & Plants-export_246: -2075108712
       PC Computer - Stardew Valley - Background Trees & Plants-export_122: -1727772490
@@ -6370,8 +6370,8 @@ TextureImporter:
       PC Computer - Stardew Valley - Background Trees & Plants-export_212: -608881244
       PC Computer - Stardew Valley - Background Trees & Plants-export_281: 1180074603
       PC Computer - Stardew Valley - Background Trees & Plants-export_42: -1805418989
-      PC Computer - Stardew Valley - Background Trees & Plants-export_285: 1883614144
       PC Computer - Stardew Valley - Background Trees & Plants-export_185: 1676979304
+      PC Computer - Stardew Valley - Background Trees & Plants-export_285: 1883614144
       PC Computer - Stardew Valley - Background Trees & Plants-export_243: 1812513214
       PC Computer - Stardew Valley - Background Trees & Plants-export_8: 796500524
       PC Computer - Stardew Valley - Background Trees & Plants-export_271: 358809730
@@ -6486,14 +6486,14 @@ TextureImporter:
       PC Computer - Stardew Valley - Background Trees & Plants-export_75: -1910018642
       PC Computer - Stardew Valley - Background Trees & Plants-export_111: -80129933
       PC Computer - Stardew Valley - Background Trees & Plants-export_48: 1059413309
+      PC Computer - Stardew Valley - Background Trees & Plants-export_103: -722488170
       PC Computer - Stardew Valley - Background Trees & Plants-export_130: 1804936185
-      PC Computer - Stardew Valley - Background Trees & Plants-export_2: -66908562
       PC Computer - Stardew Valley - Background Trees & Plants-export_277: -1875226838
       PC Computer - Stardew Valley - Background Trees & Plants-export_127: 714573635
-      PC Computer - Stardew Valley - Background Trees & Plants-export_159: 1083822184
+      PC Computer - Stardew Valley - Background Trees & Plants-export_2: -66908562
       PC Computer - Stardew Valley - Background Trees & Plants-export_108: 1205418153
+      PC Computer - Stardew Valley - Background Trees & Plants-export_226: -1199868796
       PC Computer - Stardew Valley - Background Trees & Plants-export_245: 976354509
-      PC Computer - Stardew Valley - Background Trees & Plants-export_3: 1323188457
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

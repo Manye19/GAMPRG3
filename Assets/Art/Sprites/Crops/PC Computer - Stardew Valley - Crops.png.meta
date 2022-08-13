@@ -6834,7 +6834,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PC Computer - Stardew Valley - Crops_282: 2146757329
       PC Computer - Stardew Valley - Crops_114: -40977613
       PC Computer - Stardew Valley - Crops_2: -1495787099
       PC Computer - Stardew Valley - Crops_180: 281252537
@@ -7158,11 +7157,11 @@ TextureImporter:
       PC Computer - Stardew Valley - Crops_149: 1649299072
       PC Computer - Stardew Valley - Crops_309: 165386278
       PC Computer - Stardew Valley - Crops_187: 698855543
-      PC Computer - Stardew Valley - Crops_65: 1345826252
       PC Computer - Stardew Valley - Crops_165: -1399688180
-      PC Computer - Stardew Valley - Crops_190: 971541690
-      PC Computer - Stardew Valley - Crops_129: 606728695
+      PC Computer - Stardew Valley - Crops_65: 1345826252
       PC Computer - Stardew Valley - Crops_102: -1168726844
+      PC Computer - Stardew Valley - Crops_129: 606728695
+      PC Computer - Stardew Valley - Crops_282: 2146757329
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

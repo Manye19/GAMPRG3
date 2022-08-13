@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectName: Stone
   scriptableObjectIcon: {fileID: 1072251799, guid: 5b21aa1abea10f34b82d673a5a298ecf, type: 3}
+  buyPrice: 5
+  sellPrice: 2

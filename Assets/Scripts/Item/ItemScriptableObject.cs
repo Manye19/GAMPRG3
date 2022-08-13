@@ -7,4 +7,6 @@ public class ItemScriptableObject : ScriptableObject
 {
     public string scriptableObjectName;
     public Sprite scriptableObjectIcon;
+    public float buyPrice;
+    public float sellPrice;
 }

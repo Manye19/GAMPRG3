@@ -14,15 +14,14 @@ public class StatManager : MonoBehaviour
 
     public virtual void ModifyStat(float p_amount, UnityEvent<float, float> p_onChangedEvent, UnityEvent p_OnDepleted)
     {        
-        if (currentStat > 0 && currentStat <= maxStat)
+        if (currentStat >= 0)
         {
             currentStat += p_amount;
             p_onChangedEvent.Invoke(currentStat, maxStat);
         }
-
         if (currentStat <= 0)
         {
-            p_OnDepleted.Invoke();
+            p_OnDepleted?.Invoke();
         }
     }
 }

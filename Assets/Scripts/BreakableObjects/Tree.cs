@@ -21,8 +21,7 @@ public class Tree : BreakableObject
         HP = 8;
     }
     protected override void OnEnable()
-    {
-        
+    {        
         health = GetComponent<Health>();
         health.onDeathEvent.AddListener(SpawnDrops);
     }

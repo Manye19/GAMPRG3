@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectName: Parsnip
   scriptableObjectIcon: {fileID: 21300000, guid: c57b96c1525ce6843af4d444cf983da4, type: 3}
+  buyPrice: 100
+  sellPrice: 35
