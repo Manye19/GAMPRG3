@@ -44110,9 +44110,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 837130812}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1580525381}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenShopUI
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -60576,8 +60576,6 @@ MonoBehaviour:
     so_Item: {fileID: 11400000, guid: 115d63f123c05744cb893e553a64c18d, type: 2}
     amount: 0
     itemUI: {fileID: 0}
-  parsnipSeedsPrefab: {fileID: 4202847177506632568, guid: 295825223981b56479dfff1d581f48c2, type: 3}
-  parsnipSeedsScriptableObject: {fileID: 11400000, guid: 115d63f123c05744cb893e553a64c18d, type: 2}
   inventorySlots: 10
   inventoryUI: {fileID: 653899227}
 --- !u!4 &1404521680
@@ -71106,7 +71104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205.16241, y: -58.967712}
+  m_AnchoredPosition: {x: 205.16235, y: -58.967712}
   m_SizeDelta: {x: 51.4542, y: 117.9354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1861415271
@@ -72340,7 +72338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.62677, y: -58.967712}
+  m_AnchoredPosition: {x: 87.62671, y: -58.967712}
   m_SizeDelta: {x: 166.89, y: 117.9354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970163117
