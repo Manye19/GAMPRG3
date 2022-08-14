@@ -23,8 +23,6 @@ public class InventoryManager : MonoBehaviour
     public GameObject[] startingItems;
     public List<GameObject> unstackableItems = new List<GameObject>();
     [NonReorderable] public List<ItemData> stackableItems = new List<ItemData>();
-    public GameObject parsnipSeedsPrefab;
-    public ItemScriptableObject parsnipSeedsScriptableObject;
 
     public int inventorySlots = 10;
     public InventoryUI inventoryUI;
@@ -86,8 +84,8 @@ public class InventoryManager : MonoBehaviour
         }
         if (foundStackableItem.amount <= 0)
         {
-            unstackableItems.Remove(GO_Item);
             inventoryUI.RemoveToUI(GO_Item.GetComponent<Item>().UISprite);
+            unstackableItems.Remove(GO_Item);
         }
     }
 
